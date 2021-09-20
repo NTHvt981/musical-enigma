@@ -1,7 +1,8 @@
 #pragma once
 #include <memory>
-#include <IEntity.h>
-#include <ISpriteLib.h>
+#include "entity/IEntity.h"
+#include "render_resource/ISprite.h"
+#include "render_resource/ISpriteLib.h"
 #include "Constants.h"
 
 class CBlock :

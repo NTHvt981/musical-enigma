@@ -1,5 +1,4 @@
 #pragma once
-#include "IMessage.h"
 #include "RgfConstants.h"
 #include <queue>
 

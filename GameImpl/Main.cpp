@@ -1,5 +1,5 @@
 #include "Main.h"
-#include "CGame.h"
+#include "game_impl/CGame.h"
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {

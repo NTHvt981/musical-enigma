@@ -1,7 +1,9 @@
 #pragma once
 #include <unordered_map>
+#include <memory>
+#include <d3dx9.h>
 
-#include "IGraphic.h"
+#include "render/IGraphic.h"
 
 namespace rgf
 {

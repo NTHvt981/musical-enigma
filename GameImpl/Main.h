@@ -10,5 +10,5 @@
 #include <stdlib.h>
 
 #include "Constants.h"
-#include "IGame.h"
+#include "game/IGame.h"
 

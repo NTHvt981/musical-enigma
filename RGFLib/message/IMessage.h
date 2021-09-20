@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 
-#include "IData.h"
+#include "data/IData.h"
 
 namespace rgf
 {

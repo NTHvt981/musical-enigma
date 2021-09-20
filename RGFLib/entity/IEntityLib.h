@@ -3,7 +3,7 @@
 #include <unordered_map>
 
 #include "IEntity.h"
-#include "IGObjectLib.h"
+#include "game_object/IGObjectLib.h"
 
 namespace rgf
 {

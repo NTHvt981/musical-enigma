@@ -18,7 +18,7 @@ project "GameImpl"
     files {"GameImpl/**.cpp", "GameImpl/**.h", "GameImpl/**.png"}
     configuration "windows"
         links {"RGFLib", "d3d9", "dxguid", "dxerr", "dinput8", "Dxguid", "dsound", "legacy_stdio_definitions", "avrt", "ole32", "winmm", "d3dx9"}
-    includedirs { "RGFLib", "RGFLib/**", "GameImpl", "GameImpl/**" }
+    includedirs { "RGFLib", "GameImpl" }
 
     includedirs { "_DXDSDK/Include" }
     filter { "platforms:Win32" }
@@ -35,7 +35,7 @@ project "RGFLib"
     files {"RGFLib/**.cpp", "RGFLib/**.h"}
     configuration "windows"
         links {"d3d9", "dxguid", "dxerr", "dinput8", "Dxguid", "dsound", "legacy_stdio_definitions", "avrt", "ole32", "winmm", "d3dx9"}
-    includedirs { "RGFLib", "RGFLib/**" }
+    includedirs { "RGFLib" }
 
     includedirs { "_DXDSDK/Include" }
     filter { "platforms:Win32" }

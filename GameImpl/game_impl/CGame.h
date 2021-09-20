@@ -1,11 +1,11 @@
 #pragma once
-#include "IGame.h"
-#include "IGraphic.h"
-#include "ISpriteLib.h"
-#include "ITextureLib.h"
+#include "game/IGame.h"
+#include "render/IGraphic.h"
+#include "render_resource/ISpriteLib.h"
+#include "render_resource/ITextureLib.h"
 #include "Constants.h"
-#include "CBlock.h"
-#include <IEntityLib.h>
+#include "entity_impl/CBlock.h"
+#include "entity/IEntityLib.h"
 
 class CGame :
     public rgf::IGame
@@ -27,5 +27,8 @@ public:
     virtual void LoadResources() override;
     virtual void LoadTextures() override;
     virtual void LoadSprites() override;
+
+    // Inherited via IGame
+    virtual void Destroy() override;
 };
 

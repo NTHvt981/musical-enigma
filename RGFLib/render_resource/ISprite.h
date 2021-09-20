@@ -1,5 +1,5 @@
 #pragma once
-#include "IGraphic.h"
+#include "render/IGraphic.h"
 
 namespace rgf
 {

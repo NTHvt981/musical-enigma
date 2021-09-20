@@ -2,8 +2,8 @@
 #include <d3dx9.h>
 #include <memory>
 
-#include "Vector.h"
-#include "Box.h"
+#include "utils/Vector.h"
+#include "utils/Box.h"
 
 namespace rgf
 {

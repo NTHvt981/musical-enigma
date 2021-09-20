@@ -4,9 +4,9 @@
 #include <d3d9.h>
 #include <d3dx9.h>
 
-#include "Debug.h"
-#include "ICamera.h"
-#include "Vector.h"
+#include "utils/Debug.h"
+#include "render/ICamera.h"
+#include "utils/Vector.h"
 
 namespace rgf
 {

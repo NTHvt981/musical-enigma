@@ -1,9 +1,10 @@
 #pragma once
 
-#include "IGObject.h"
-#include "Box.h"
-#include "Vector.h"
-#include "ISprite.h"
+#include "game_object/IGObject.h"
+#include "utils/Box.h"
+#include "utils/Vector.h"
+#include "render_resource/ISprite.h"
+#include "game/IGameInfo.h"
 
 namespace rgf
 {

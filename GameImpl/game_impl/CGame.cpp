@@ -66,3 +66,7 @@ void CGame::LoadSprites()
 	spriteLib->Add( ID_GREEN_BLOCK, 0, 64, 63, 63+64, blockTex );
 	spriteLib->Add( ID_BLUE_BLOCK, 64, 64, 63+64, 63+64, blockTex );
 }
+
+void CGame::Destroy()
+{
+}

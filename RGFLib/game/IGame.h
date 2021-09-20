@@ -2,23 +2,24 @@
 #include <memory>
 #include <windows.h>
 
-#include "Debug.h"
-#include "IEntity.h"
+#include "utils/Debug.h"
+#include "entity/IEntity.h"
 #include "RgfConstants.h"
 #include "IGameInfo.h"
+#include "lifecycle/ILifeCycle.h"
 
 namespace rgf
 {
 /// <summary>
 /// [singleton] Heart of the game, init and run in main file
 /// </summary>
-class IGame
+class IGame: public ILifeCycle
 {
 public:
 	IGame( HWND hWnd, HINSTANCE hInstance );
 	static std::shared_ptr<IGame> GetInstance();
 	static void InitInstance(std::shared_ptr<IGame> game);
-	void Init();
+	void Init() override;
 	/// <summary>
 	/// load resource -> (update/render) loop
 	/// </summary>
@@ -39,7 +40,7 @@ protected:
 	virtual void LoadSprites() = 0;
 
 	virtual void Update(DWORD dt) = 0;
-	void Render();
+	void Render() override;
 	virtual void DuringRender() = 0;
 
 	void CleanResources();

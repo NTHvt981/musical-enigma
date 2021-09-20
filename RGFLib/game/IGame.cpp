@@ -54,8 +54,8 @@ void IGame::InitInstance(std::shared_ptr<IGame> game)
 
 void IGame::Init()
 {
-#pragma region reset the window true width and height
 	IGraphic::GetInstance()->Init( m_hWnd );
+#pragma region reset the window true width and height
 	LPRECT rect = new RECT{};
 	auto result = GetClientRect( m_hWnd, rect );
 	m_info.m_windowClientWidth = rect->right;
