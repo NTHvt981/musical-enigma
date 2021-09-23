@@ -1,0 +1,27 @@
+Game lifecycle
+WinMain()
+    Game::Init()
+        Graphic::Init()
+        Input::Init()
+    Game::Run()
+        Game::LoadResource()
+            Game::LoadTexture()
+            Game::LoadSprite()
+        LOOP
+            Game::Update(DWORD dt)
+                Input::Update()
+                SceneManager::Update(DWORD dt)
+                    Scene::Update(DWORD dt)
+                        List of GameObject::Update(DWORD dt)
+            Game::Render()
+                Input::Render()
+                SceneManager::Render(DWORD dt)
+                    Scene::Render(DWORD dt)
+                        List of GameObject::Render(DWORD dt)
+        Game::UnloadResource()
+            Game::UnloadSprite()
+            Game::UnloadTexture()
+        END LOOP
+    Game::Run() END
+WinMain() END
+
