@@ -16,7 +16,9 @@ class ISprite
 
 	rgf::Vector m_origin;
 
+#ifdef D3D9
 	LPDIRECT3DTEXTURE9 m_texture;
+#endif
 public:
 	ISprite(int id, int left, int top, int right, int bottom, LPDIRECT3DTEXTURE9 tex
 		, float origin_x = 0, float origin_y = 0);

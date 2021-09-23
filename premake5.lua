@@ -24,6 +24,7 @@ project "GameImpl"
     filter { "platforms:Win32" }
         libdirs { "_DXDSDK/Lib/x86" }
         targetdir "build/x86"
+        define { "D3D9" }
     filter { "platforms:Win64" }
         libdirs { "_DXDSDK/Lib/x64" }
         targetdir "build/x64"
@@ -41,6 +42,7 @@ project "RGFLib"
     filter { "platforms:Win32" }
         libdirs { "_DXDSDK/Lib/x86" }
         targetdir "build/x86"
+        define { "D3D9" }
     filter { "platforms:Win64" }
         libdirs { "_DXDSDK/Lib/x64" }
         targetdir "build/x64"

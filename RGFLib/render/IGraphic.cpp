@@ -9,6 +9,7 @@ std::shared_ptr<IGraphic> IGraphic::GetInstance()
     return m_instance;
 }
 
+#ifdef D3D9
 int IGraphic::Init(HWND hwnd)
 {
 	this->m_hWnd = hwnd;
@@ -118,26 +119,11 @@ void IGraphic::Draw(
 {
 	if (ICamera::GetInstance() != NULL)
 	{
-		DrawWithTransformation(texture, x, y, left, top, right, bottom, alpha);
+		DrawWithTransformation(texture, x, y, left, top, right, bottom, origin_x, origin_y, alpha);
 		return;
 	}
 
-	// TODO check if rem codes work the same as DrawWithFixPosition
-	/*
-	D3DXMATRIX matrix;
-
-	int opacity = alpha * 255;
-	D3DXVECTOR3 origin(origin_x, origin_y, 0);
-	D3DXVECTOR3 position(x, y, 0);
-	RECT r;
-	r.left = left;
-	r.top = top;
-	r.right = right;
-	r.bottom = bottom;
-
-	spriteHandler->Draw(texture, &r, &origin, &position, D3DCOLOR_RGBA(255, 255, 255, opacity));
-	*/
-	this->DrawWithFixedPosition(texture, x, y, left, top, right, bottom, alpha);
+	this->DrawWithFixedPosition(texture, x, y, left, top, right, bottom, origin_x, origin_y, alpha);
 }
 
 void IGraphic::Draw(LPDIRECT3DTEXTURE9 texture, float x, float y, float origin_x, float origin_y, float alpha)
@@ -243,4 +229,10 @@ void IGraphic::End()
 	m_backBuffer->Release();
 	m_d3ddev->Release();
 }
+#else // D3D9
+ID3D10Texture2D* LoadTexture( LPCWSTR texturePath )
+{
+
+}
+#endif
 } //namespace rgf

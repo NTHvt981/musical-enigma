@@ -1,5 +1,8 @@
 #pragma once
+#ifdef D3D9
 #include <d3dx9.h>
+#else // D3D9
+#endif
 #include <memory>
 
 #include "utils/Vector.h"
